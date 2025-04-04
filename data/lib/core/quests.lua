@@ -4,11 +4,12 @@ if not Quests then
 			name = "The Explorer Society", startstorageid = Storage.ExplorerSociety.QuestLine, startstoragevalue = 1,
 			missions = {
 				[1] = {
-					name = "Joining the Explorers", storageid = Storage.ExplorerSociety.QuestLine, startvalue = 1, endvalue = 4,
+					name = "Joining the Explorers", storageid = Storage.ExplorerSociety.JoiningtheExplorers, startvalue = 1, endvalue = 4,
 					states = {
 						[1] = "The mission should be simple to fulfil. You have to seek out Uzgod in Kazordoon and get the pickaxe for us. Or just find dwarven pickaxe on your own...",
 						[2] = "Get into Dwacatra and bring family brooch back to Uzgod.",
 						[3] = "Bring the pickaxe back to the Explorer Society representative.",
+						[4] = "You brought the pickaxe back to the Explorer Society representative.",
 					},
 
 				},
@@ -62,7 +63,7 @@ if not Quests then
 				},
 
 				[6] = {
-					name = "The Bonelord Secret", storageid = Storage.ExplorerSociety.QuestLine, startvalue = 30, endvalue = 32,
+					name = "The Beholder Secret", storageid = Storage.ExplorerSociety.QuestLine, startvalue = 30, endvalue = 32,
 					states = {
 						[30] = "Travel to the city of Darashia and then head north-east for the pyramid. If any documents are left, you probably find them in the catacombs beneath.",
 						[31] = "Bring the Wrinkled Parchment back to the Explorer Society representative.",
@@ -98,7 +99,7 @@ if not Quests then
 				},
 
 				[10] = {
-					name = "The Rune Writings", storageid = Storage.ExplorerSociety.QuestLine, startvalue = 42, endvalue = 47,
+					name = "The Rune Writings", storageid = Storage.ExplorerSociety.QuestLine, startvalue = 42, endvalue = 44,
 					states = {
 						[42] = "Somewhere under the ape infested city of Banuta, one can find dungeons that were once inhabited by lizards. Look there for an atypical structure that would rather fit to Ankrahmun and its Ankrahmun Tombs. Copy the runes you will find on this structure.",
 						[43] = "Report back to the Explorer Society representative.",
