@@ -26,10 +26,12 @@ local function creatureSayCallback(cid, type, msg)
 		elseif npcHandler.topic[cid] == 4 then
 			npcHandler:say("Captain Max will bring you to Calassa whenever you are ready. Please try to retrieve the missing logbook which must be in one of the sunken shipwrecks.", cid)
 			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 63)
+			player:setStorageValue(Storage.ExplorerSociety.CalassaQuest, 1)
 			player:setStorageValue(Storage.ExplorerSociety.calassaDoor, 1)
 			npcHandler.topic[cid] = 0
-		elseif player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 64 then
+		elseif player:getStorageValue(Storage.ExplorerSociety.CalassaQuest) == 2 then
 			npcHandler:say("OH! So you have safely returned from Calassa! Congratulations, were you able to retrieve the logbook?", cid)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 64)
 			npcHandler.topic[cid] = 5
 		end
 	elseif msgcontains(msg, "yes") then
@@ -52,6 +54,7 @@ local function creatureSayCallback(cid, type, msg)
 			if player:removeItem(6124, 1) then
 				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 65)
 				npcHandler:say("Yes! That's the logbook! However... it seems that the water has already destroyed many of the pages. This is not your fault though, you did your best. Thank you!", cid)
+				player:setStorageValue(Storage.ExplorerSociety.CalassaQuest, 3)
 				npcHandler.topic[cid] = 0
 			end
 		end

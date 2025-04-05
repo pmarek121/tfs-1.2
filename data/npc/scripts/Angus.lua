@@ -40,13 +40,13 @@ local function creatureSayCallback(cid, type, msg)
         -- MISSION CHECK
     elseif msgcontains(msg, "mission") then
         if player:getStorageValue(Storage.ExplorerSociety.JoiningtheExplorers) > 3 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 3 and player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) < 26 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) < 26 or player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 7 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 7 or player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 16 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 16 or player:getStorageValue(Storage.ExplorerSociety.JoiningtheExplorers) == 4 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 4 then
-            npcHandler:say("The missions available for your rank are the {butterfly hunt}, {plant collection} and {ice delivery}.", cid)
+            npcHandler:say("The missions available for your rank are the {Butterfly hunt}, {Plant collection} and {Ice delivery}.", cid)
             npcHandler.topic[cid] = 0
         elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) > 25 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 35 and player:getStorageValue(Storage.ExplorerSociety.TheOrcPowder) < 35 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) < 35 or player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 26 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 26 or player:getStorageValue(Storage.ExplorerSociety.TheLizardUrn) == 29  and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 29 or player:getStorageValue(Storage.ExplorerSociety.TheBonelordSecret) == 32 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 32 then
-            npcHandler:say("The missions available for your rank are {lizard urn}, {bonelord secrets} and {orc powder}.", cid)
+            npcHandler:say("The missions available for your rank are {Lizard Urn}, {Beholder secrets} and {Orc Powder}.", cid)
             npcHandler.topic[cid] = 0
         elseif player:getStorageValue(Storage.ExplorerSociety.TheOrcPowder) > 34 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 34 and player:getStorageValue(Storage.ExplorerSociety.TheRuneWritings) < 44 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) < 44 or player:getStorageValue(Storage.ExplorerSociety.TheOrcPowder) == 35 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 35 or player:getStorageValue(Storage.ExplorerSociety.TheElvenPoetry) == 38 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 38 or player:getStorageValue(Storage.ExplorerSociety.TheMemoryStone) == 41 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 41 then
-            npcHandler:say("The missions available for your rank are {elven poetry}, {memory stone} and {rune writings}.", cid)
+            npcHandler:say("The missions available for your rank are {Elven Poetry}, {Memory Stone} and {Rune Writings}.", cid)
             npcHandler.topic[cid] = 0
         elseif player:getStorageValue(Storage.ExplorerSociety.TheRuneWritings) == 44 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 44 then
             npcHandler:say("The explorer society needs a great deal of help in the research of astral travel. Are you willing to help?", cid)
@@ -106,7 +106,7 @@ local function creatureSayCallback(cid, type, msg)
         -- PICKAXE MISSION
 
         -- ICE DELIVERY
-    elseif msgcontains(msg, "ice delivery") then
+    elseif msgcontains(msg, "ice") or msgcontains(msg, "delivery") then
         if player:getStorageValue(Storage.ExplorerSociety.JoiningtheExplorers) == 4 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 4 then
             npcHandler:say({
                 "Our finest minds came up with the theory that deep beneath the ice island of Folda ice can be found that is ancient. To prove this theory we would need a sample of the aforesaid ice ...",
@@ -121,7 +121,7 @@ local function creatureSayCallback(cid, type, msg)
         -- ICE DELIVERY
 
         -- BUTTERFLY HUNT
-    elseif msgcontains(msg, "butterfly hunt") then
+    elseif msgcontains(msg, "butterfly") or msgcontains(msg, "hunt") then
         if player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 7 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 7 then
             npcHandler:say("The mission asks you to collect some species of butterflies, are you interested?", cid)
             npcHandler.topic[cid] = 7
@@ -155,7 +155,7 @@ local function creatureSayCallback(cid, type, msg)
         end
         -- BUTTERFLY HUNT
         -- PLANT COLLECTION
-    elseif msgcontains(msg, "plant collection") then
+    elseif msgcontains(msg, "plant") or msgcontains(msg, "collection") then
         if player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 16 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 16 then
             npcHandler:say("In this mission we require you to get us some plant samples from Tiquandan plants. Would you like to fulfil this mission?", cid)
             npcHandler.topic[cid] = 11
@@ -184,7 +184,7 @@ local function creatureSayCallback(cid, type, msg)
         -- PLANT COLLECTION
 
         -- LIZARD URN
-    elseif msgcontains(msg, "lizard urn") then
+    elseif msgcontains(msg, "urn") then
         if player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 26 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 26 then
             npcHandler:say("The explorer society would like to acquire an ancient urn which is some sort of relic to the lizard people of Tiquanda. Would you like to accept this mission?", cid)
             npcHandler.topic[cid] = 15
@@ -195,22 +195,22 @@ local function creatureSayCallback(cid, type, msg)
         -- LIZARD URN
 
         -- BONELORDS
-    elseif msgcontains(msg, "bonelord secrets") then
+    elseif msgcontains(msg, "beholder") or msgcontains(msg, "secrets") then
         if player:getStorageValue(Storage.ExplorerSociety.TheLizardUrn) == 29  and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 29 then
             npcHandler:say({
-                "We want to learn more about the ancient race of bonelords. We believe the black pyramid north east of Darashia was originally built by them ...",
-                "We ask you to explore the ruins of the black pyramid and look for any signs that prove our theory. You might probably find some document with the numeric bonelord language ...",
+                "We want to learn more about the ancient race of beholders. We believe the black pyramid north east of Darashia was originally built by them ...",
+                "We ask you to explore the ruins of the black pyramid and look for any signs that prove our theory. You might probably find some document with the numeric beholder language ...",
                 "That would be sufficient proof. Would you like to accept this mission?"
             }, cid)
             npcHandler.topic[cid] = 17
         elseif player:getStorageValue(Storage.ExplorerSociety.TheBonelordSecret) == 31 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 30 then
-            npcHandler:say("Have you found any proof that the pyramid was built by bonelords?", cid)
+            npcHandler:say("Have you found any proof that the pyramid was built by beholders?", cid)
             npcHandler.topic[cid] = 18
         end
-        -- BONELORDS
+        -- BEHOLDERS
 
         -- ORC POWDER
-    elseif msgcontains(msg, "orc powder") then
+    elseif msgcontains(msg, "orc") or msgcontains(msg, "powder") then
         if player:getStorageValue(Storage.ExplorerSociety.TheBonelordSecret) == 32 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 32 then
             npcHandler:say({
                 "It is commonly known that orcs of Uldereks Rock use some sort of powder to increase the fierceness of their war wolves and berserkers ...",
@@ -225,7 +225,7 @@ local function creatureSayCallback(cid, type, msg)
         -- ORC POWDER
 
         -- ELVEN POETRY
-    elseif msgcontains(msg, "elven poetry") then
+    elseif msgcontains(msg, "elven") or msgcontains(msg, "poetry") then
         if player:getStorageValue(Storage.ExplorerSociety.TheOrcPowder) == 35 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 35 then
             npcHandler:say({
                 "Some high ranking members would like to study elven poetry. They want the rare book 'Songs of the Forest' ...",
@@ -239,7 +239,7 @@ local function creatureSayCallback(cid, type, msg)
         -- ELVEN POETRY
 
         -- MEMORY STONE
-    elseif msgcontains(msg, "memory stone") then
+    elseif msgcontains(msg, "memory") then
         if player:getStorageValue(Storage.ExplorerSociety.TheElvenPoetry) == 38 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 38 then
             npcHandler:say({
                 "We acquired some knowledge about special magic stones. Some lost civilisations used it to store knowledge and lore, just like we use books ...",
@@ -254,7 +254,7 @@ local function creatureSayCallback(cid, type, msg)
         -- MEMORY STONE
 
         -- RUNE WRITINGS
-    elseif msgcontains(msg, "rune writings") then
+    elseif msgcontains(msg, "rune") or msgcontains(msg, "writings") then
         if player:getStorageValue(Storage.ExplorerSociety.TheMemoryStone) == 41 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 41 then
             npcHandler:say({
                 "We would like to study some ancient runes that were used by the lizard race. We suspect some relation of the lizards to the founders of Ankrahmun ...",
@@ -398,7 +398,7 @@ local function creatureSayCallback(cid, type, msg)
             end
             -- LIZARD URN
 
-            -- BONELORDS
+            -- BEHOLDERS
         elseif npcHandler.topic[cid] == 17 then
             player:setStorageValue(Storage.ExplorerSociety.TheBonelordSecret, 30)
 			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 30)
@@ -415,7 +415,7 @@ local function creatureSayCallback(cid, type, msg)
                 npcHandler:say("You did it! Excellent! The scientific world will be shaken by this discovery!", cid)
                 npcHandler.topic[cid] = 0
             end
-            -- BONELORDS
+            -- BEHOLDERS
 
             -- ORC POWDER
         elseif npcHandler.topic[cid] == 19 then
@@ -579,19 +579,23 @@ local function creatureSayCallback(cid, type, msg)
         -- ANSWER NO
 
         -- SKULL OF RATHA / GIANT SMITHHAMMER
-    elseif msgcontains(msg, "skull of ratha") and player:getStorageValue(Storage.ExplorerSociety.skullofratha) < 1 then
+    elseif msgcontains(msg, "skull") or msgcontains(msg, "ratha") and player:getStorageValue(Storage.ExplorerSociety.skullofratha) < 1 then
         npcHandler:say({
             "Ratha was a great explorer and even greater ladies' man. Sadly he never returned from a visit to the amazons. Probably he is dead ...",
             "The society offers a substantial reward for the retrieval of Ratha or his remains. Do you have any news about Ratha?"
         }, cid)
         npcHandler.topic[cid] = 33
-    elseif msgcontains(msg, "giant smith hammer") and player:getStorageValue(Storage.ExplorerSociety.giantsmithhammer) < 1 then
+    elseif msgcontains(msg, "giant") and player:getStorageValue(Storage.ExplorerSociety.giantsmithhammer) < 1 then
         npcHandler:say("The explorer society is looking for a genuine giant smith hammer for our collection. It is rumoured the cyclopses of the Plains of Havoc might be using one. Did you by chance obtain such a hammer?", cid)
         npcHandler.topic[cid] = 34
         -- SKULL OF RATHA / GIANT SMITHHAMMER
     end
     return true
 end
+
+npcHandler:setMessage(MESSAGE_GREET, "Be greeted, noble |PLAYERNAME| and welcome to the Explorer Society.")
+npcHandler:setMessage(MESSAGE_FAREWELL, "Come back soon, noble |PLAYERNAME|.")
+npcHandler:setMessage(MESSAGE_WALKAWAY, "Come back soon, noble.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

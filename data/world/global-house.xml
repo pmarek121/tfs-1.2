@@ -283,13 +283,13 @@
 	<house name="Rosebud B" houseid="285" entryx="32263" entryy="31698" entryz="7" rent="1000" townid="4" size="23" />
 	<house name="Rosebud C" houseid="286" entryx="32272" entryy="31698" entryz="7" rent="1340" townid="4" size="26" />
 	<house name="Nordic Stronghold" houseid="287" entryx="32297" entryy="31675" entryz="7" rent="18400" guildhall="true" townid="4" size="335" />
-	<house name="Seawatch" houseid="288" entryx="32520" entryy="31600" entryz="7" rent="25010" guildhall="true" townid="4" size="346" />
+	<house name="Seawatch" houseid="288" entryx="32520" entryy="31600" entryz="7" rent="25010" guildhall="true" townid="4" size="347" />
 	<house name="Northport Village 5" houseid="289" entryx="32503" entryy="31605" entryz="7" rent="1805" townid="4" size="26" />
 	<house name="Northport Village 4" houseid="290" entryx="32490" entryy="31602" entryz="7" rent="2630" townid="4" size="42" />
 	<house name="Northport Village 6" houseid="291" entryx="32502" entryy="31606" entryz="7" rent="2135" townid="4" size="31" />
 	<house name="Northport Village 1" houseid="293" entryx="32482" entryy="31614" entryz="7" rent="1475" townid="4" size="20" />
 	<house name="Northport Village 2" houseid="294" entryx="32482" entryy="31609" entryz="7" rent="1475" townid="4" size="20" />
-	<house name="Northport Clanhall" houseid="295" entryx="32468" entryy="31614" entryz="7" rent="9810" guildhall="true" townid="4" size="122" />
+	<house name="Northport Clanhall" houseid="295" entryx="32468" entryy="31614" entryz="7" rent="9810" guildhall="true" townid="4" size="121" />
 	<house name="Northport Village 3" houseid="296" entryx="32482" entryy="31611" entryz="6" rent="5435" townid="4" size="91" />
 	<house name="Senja Clanhall" houseid="297" entryx="32168" entryy="31664" entryz="7" rent="10575" guildhall="true" townid="4" size="161" />
 	<house name="Senja Village 2" houseid="298" entryx="32161" entryy="31664" entryz="7" rent="795" townid="4" size="15" />

@@ -17,6 +17,25 @@ local function greetCallback(cid)
 	return true
 end
 
+
+local node1 = keywordHandler:addKeyword({'challenge'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Challenge for 2000 gp?'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'challenge', price = 2000})
+node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
+
+local node1 = keywordHandler:addKeyword({'conjure power bolt'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Conjure Power Bolt for 2000 gp?'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'conjure power bolt', price = 2000})
+node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
+
+local node1 = keywordHandler:addKeyword({'enchant staff'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Enchant Staff for 2000 gp?'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'enchant staff', price = 2000})
+node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
+
+local node1 = keywordHandler:addKeyword({'wild growth'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Wild Growth for 2000 gp?'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'wild growth', price = 2000})
+node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
+
+
+
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
