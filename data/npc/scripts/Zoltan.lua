@@ -8,28 +8,29 @@ function onCreatureSay(cid, type, msg) npcHandler:onCreatureSay(cid, type, msg) 
 function onThink() npcHandler:onThink() end
 
 local node1 = keywordHandler:addKeyword({'energy bomb'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Energy Bomb for 880 gp?'})
-node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'energy bomb'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'energy bomb', price = 880})
 node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
 
 local node1 = keywordHandler:addKeyword({'fierce berserk'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Fierce Berserk for 5000 gp?'})
-node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'fierce berserk'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'fierce berserk', price = 5000})
 node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
 
 local node1 = keywordHandler:addKeyword({'mass healing'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Mass Healing for 2200 gp?'})
-node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'mass healing'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'mass healing', price = 2200})
 node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
 
 local node1 = keywordHandler:addKeyword({'paralyze'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Paralyze for 1900 gp?'})
-node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'paralyze'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'paralyze', price = 1900})
 node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
 
 local node1 = keywordHandler:addKeyword({'poison storm'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Poison Storm for 3400 gp?'})
-node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'poison storm'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'poison storm', price = 3400})
 node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
 
 local node1 = keywordHandler:addKeyword({'ultimate explosion'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to learn Ultimate Explosion for 8000 gp?'})
-node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'ultimate explosion'})
+node1:addChildKeyword({'yes'}, StdModule.learnSpell, {npcHandler = npcHandler, premium = false, spellName = 'ultimate explosion', price = 8000})
 node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Cant you handle the power of the spell?', reset = true})
+
 
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I am a teacher of the most powerful spells in Tibia."})
 keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I am known in this world as Zoltan."})
